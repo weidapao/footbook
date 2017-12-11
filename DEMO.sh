@@ -1,19 +1,13 @@
-cd ~/Desktop
-if [ -d demo ]; then
+if [ -d $1 ]; then
   echo 'error: dir exists'
   exit
 else
-  mkdir demo
-  cd demo
- mkdir css js
- touch index.html css/style.css js/main.js
-echo "<!DOCTYPE><title>Hello</title><h1>Hi</h1>" > index.html
-cd css
-echo "h1{color: red;}" > style.css
-cd ../js
-echo 'var string = "Hello World" alert(string)' > main.js
+  mkdir $1
+  cd $1
+  mkdir css js
+  echo "<!DOCTYPE>\n<title>Hello</title>\n<h1>Hi</h1>" > index.html
+  echo "h1{color: red;}" > css/style.css
+  echo "var string = \"Hello World\"\nalert(string)" > js/main.js
   echo 'success'
   exit
 fi
-
-# cd ~/Desktop
