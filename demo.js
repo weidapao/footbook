@@ -2,7 +2,7 @@ var fs = require('fs')
 
 var dirName = process.argv[2] // 你传的参数是从第 2 个开始的
 
-// process.chdir("/Users/weidabao/Desktop") // cd ~/Desktop
+//  process.chdir("/Users/kongfei/Desktop") // cd ~/Desktop
 fs.stat("./" + dirName, function (err, stat) {
     if (stat) {
         console.log('文件存在');
