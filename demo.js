@@ -1,3 +1,4 @@
+//测试提交
 var fs = require('fs')
 
 var dirName = process.argv[2] // 你传的参数是从第 2 个开始的
